@@ -2,10 +2,10 @@
 // My list of questions
 
 var questions = ['What is your name?',
- 'What is your chat usernam, including the host',
+ 'What is your chat username, including the host',
 'In which timezone do you reside?',
 'Why are you in the Mobile Development Program?',
-'How confortable are you with Javascript?',
+'How comfortable are you with Javascript?',
 'How comfortable are you with Titanium?',
 'What is your favourite color?',
 'What is your favorite sport?',
@@ -29,7 +29,7 @@ var nav = Ti.UI.iOS.createNavigationWindow({
 	window: mainWin
 });
 
-var mainView = Ti.UI.createScrollableView({
+var mainView = Ti.UI.createScrollView({
 	top: 80,
 	left: 10,
 	right:10,
@@ -39,21 +39,33 @@ var mainView = Ti.UI.createScrollableView({
 	backgroundColor: '#24364b'
 });
 
+var loadAnswer = require('json');
+
+
+
+//var info = function(){
+	//var newWin = Ti.UI.createWindow({
+		//backgroundColor: '#1c1b20'
+	//});
+	//nav.openWindow(newWin);
+//};
+
 for (var i=0, x= questions.length; i<x; i++){
 		
 		var qLabel = Ti.UI.createLabel({
-			top:20,
+			top:i+10,
 			text: questions[i],
 			font: {fontSize:20, fontFamily: 'Arial' },
 			color: '#fff'
 		});
-		mainView.add(qLabel);
-		console.log(questions[i]);
+		qLabel.addEventListener('click', loadAnswer.newInfo);
+		//console.log(questions[i]);
 };
 
 
 
 nav.open();
 nav.add(title);
+mainView.add(qLabel);
 mainWin.add(mainView);
 

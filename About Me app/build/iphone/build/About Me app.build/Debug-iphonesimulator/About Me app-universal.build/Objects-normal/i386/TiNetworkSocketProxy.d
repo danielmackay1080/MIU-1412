@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiNetworkSocketProxy.m \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiNetworkSocketProxy.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiProxy.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiBase.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiThreading.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiPublicAPI.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiEvaluator.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/KrollContext.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/headers/TiCore/TiCore.h \
+  headers/TiCore/Ti.h headers/TiCore/TiBase.h \
+  headers/TiCore/TiContextRef.h headers/TiCore/TiObjectRef.h \
+  headers/TiCore/TiValueRef.h headers/TiCore/WebKitAvailability.h \
+  headers/TiCore/TiStringRef.h headers/TiCore/TiStringRefCF.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/headers/TiCore/TiContextRefPrivate.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/KrollCallback.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/KrollObject.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiBindingRunLoop.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiNetworkSocketTCPProxy.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiStreamProxy.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/Tibuffer.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/TiBlob.h \
+  /Users/danielmackay/Desktop/Titanium\ Development/miu-1214/About\ Me\ app/build/iphone/Classes/AsyncSocket.h

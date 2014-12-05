@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "universal",
+	"iosSdkPath": "/Users/danielmackay/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "787cd39",
+	"name": "About Me app",
+	"id": "miu.mackay.aboutme1214",
+	"analytics": true,
+	"publisher": "danielmackay",
+	"url": "http://",
+	"version": "1.0",
+	"description": "",
+	"copyright": "2014 by danielmackay",
+	"guid": "6caa3cda-a1a3-4c42-bf7d-a74adb35a9e9",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}
