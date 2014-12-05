@@ -1,64 +1,59 @@
-// this sets the background color of the master UIView (when there are no windows/tab groups on it)
-Titanium.UI.setBackgroundColor('#000');
+// Daniel Mackay MIU 1412
+// My list of questions
 
-// create tab group
-var tabGroup = Titanium.UI.createTabGroup();
+var questions = ['What is your name?',
+ 'What is your chat usernam, including the host',
+'In which timezone do you reside?',
+'Why are you in the Mobile Development Program?',
+'How confortable are you with Javascript?',
+'How comfortable are you with Titanium?',
+'What is your favourite color?',
+'What is your favorite sport?',
+'What kind of work do you do?',
+'Do you have any pets?',
+'What is your favorite TV show?'];
 
+// This is the display for my main window
 
-//
-// create base UI tab and root window
-//
-var win1 = Titanium.UI.createWindow({  
-    title:'Tab 1',
-    backgroundColor:'#fff'
-});
-var tab1 = Titanium.UI.createTab({  
-    icon:'KS_nav_views.png',
-    title:'Tab 1',
-    window:win1
-});
-
-var label1 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 1',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: 'bed6f2'
 });
 
-win1.add(label1);
-
-//
-// create controls tab and root window
-//
-var win2 = Titanium.UI.createWindow({  
-    title:'Tab 2',
-    backgroundColor:'#fff'
-});
-var tab2 = Titanium.UI.createTab({  
-    icon:'KS_nav_ui.png',
-    title:'Tab 2',
-    window:win2
+var title = Ti.UI.createLabel({
+	top: 30,
+	text: 'About Me',
+	color: '#1c1b20'
 });
 
-var label2 = Titanium.UI.createLabel({
-	color:'#999',
-	text:'I am Window 2',
-	font:{fontSize:20,fontFamily:'Helvetica Neue'},
-	textAlign:'center',
-	width:'auto'
+var nav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
 });
 
-win2.add(label2);
+var mainView = Ti.UI.createScrollableView({
+	top: 80,
+	left: 10,
+	right:10,
+	width: 300,
+	height: 600,
+	borderRadius: 5,
+	backgroundColor: '#24364b'
+});
+
+for (var i=0, x= questions.length; i<x; i++){
+		
+		var qLabel = Ti.UI.createLabel({
+			top:20,
+			text: questions[i],
+			font: {fontSize:20, fontFamily: 'Arial' },
+			color: '#fff'
+		});
+		mainView.add(qLabel);
+		console.log(questions[i]);
+};
 
 
 
-//
-//  add tabs
-//
-tabGroup.addTab(tab1);  
-tabGroup.addTab(tab2);  
+nav.open();
+nav.add(title);
+mainWin.add(mainView);
 
-
-// open tab group
-tabGroup.open();
