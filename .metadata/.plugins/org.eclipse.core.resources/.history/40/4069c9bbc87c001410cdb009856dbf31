@@ -41,6 +41,7 @@ var info = function(){
 	var newWin = Ti.UI.createWindow({
 		backgroundColor: '#1c1b20'
 	});
+	nav.openWindow(newWin);
 
 for (var i=0, z= answers.length; i<z; i++){
 		
@@ -51,8 +52,7 @@ for (var i=0, z= answers.length; i<z; i++){
 			color: '#fff'
 		});
 		newWin.add(aLabel);
-	};
-	nav.openWindow(newWin);
+};
 };
 
 exports.newInfo = info;

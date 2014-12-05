@@ -29,14 +29,20 @@ var nav = Ti.UI.iOS.createNavigationWindow({
 	window: mainWin
 });
 
-var mainView = Ti.UI.createScrollView({
+var mainView = Ti.UI.createView({
 	top: 80,
 	left: 10,
 	right:10,
 	width: 300,
-	height: 600,
+	height: 300,
 	borderRadius: 5,
 	backgroundColor: '#24364b'
+});
+
+var getQuestions = Ti.UI.createLabel({
+	textAlign: Titanium.UI.TEXT_ALIGNMENT_CENTER,
+	text:'Questions',
+	font: {fontSize:30, fontFamily: 'Arial black' }
 });
 
 var loadAnswer = require('json');
@@ -49,22 +55,22 @@ var loadAnswer = require('json');
 	//});
 	//nav.openWindow(newWin);
 //};
-
-for (var i=0, x= questions.length; i<x; i++){
+//for (var i=0, x= questions.length; i<x; i++){
 		
-		var qLabel = Ti.UI.createLabel({
-			top: 10,
-			text: questions[i],
-			font: {fontSize:20, fontFamily: 'Arial' },
-			color: '#fff'
-		});
-		qLabel.addEventListener('click', loadAnswer.newInfo);
+		//var qLabel = Ti.UI.createLabel({
+			//top:i+10,
+			//text: questions[i],
+			//font: {fontSize:20, fontFamily: 'Arial' },
+			//color: '#fff'
+		//});
+		//qLabel.addEventListener('click', loadAnswer.newInfo);
 		//console.log(questions[i]);
-		mainView.add(qLabel);
-};
+//};
 
 
 
 nav.open();
 nav.add(title);
+mainView.add(getQuestions);
 mainWin.add(mainView);
+
