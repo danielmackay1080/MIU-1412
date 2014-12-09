@@ -22,6 +22,6 @@ var title = Ti.UI.createLabel({
 	color: '#1c1b20'
 });
 
-nav.add(title);
+nad.add(title);
 nav.open();
 win1.add(mainView);

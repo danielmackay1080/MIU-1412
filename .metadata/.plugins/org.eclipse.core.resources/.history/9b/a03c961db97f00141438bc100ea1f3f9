@@ -16,12 +16,5 @@ var mainView = Ti.UI.createView({
 	borderRadius: 12
 });
 
-var title = Ti.UI.createLabel({
-	top: 30,
-	text: 'Chelsea F.C',
-	color: '#1c1b20'
-});
-
-nav.add(title);
 nav.open();
 win1.add(mainView);
