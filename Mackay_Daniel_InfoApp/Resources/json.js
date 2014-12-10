@@ -1,4 +1,5 @@
 var background = ['rectangle_1.png','Ellipse_1.png'];
+var images = ['1drogba.jpg','2hazard.jpg','cescfabregas.jpg','diegocosta.jpg','JohnTerry.JPG'];
 
 var playerProfiles = {'cfcPlayerPros':{
 	'pTitle':'Players',
@@ -38,6 +39,38 @@ var moreInfo = function (){
 	var win3 = Ti.UI.createWindow({
 			backgroundImage: 'background/' + background[0]
 		});
+			for (i=0, z=playerProfiles.cfcPlayerPros.playerList.length; i<z; i++){
+				var statLabel = Ti.UI.createLabel({
+					top: 200,
+					text: this.stats,
+					font: {fontSize:16, fontFamily: 'Arial' },
+					color: '#fff',
+					textAlign: 'left',
+					left: 10
+				});
+				var details = Ti.UI.createScrollView({});
+				var infoLabel = Ti.UI.createLabel({
+					top: 215,
+					right: 10,
+					left: 10,
+					text: this.description,
+					font: {fontSize:16, fontFamily: 'Arial' },
+					color: '#fff',
+					textAlign: 'center'
+				});
+				for (var n=0, r= images.length; n<r; n++){
+				var myImages = Ti.UI.createImageView({
+					top: 40,
+					borederRadius: 10,
+					height: 200,
+					width: 200,
+					image: 'playerimages/'+ images[n]
+				});
+				
+			};
+			details.add(infoLabel);
+			win3.add(statLabel, details, myImages);
+		};
 		nav.openWindow(win3);
 };
 
