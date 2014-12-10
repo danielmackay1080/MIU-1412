@@ -1,11 +1,8 @@
 var background = ['rectangle_1.png','Ellipse_1.png'];
-var pList = require('json');
 
 var win1 = Ti.UI.createWindow({
 	backgroundImage: 'background/' + background[0]
 });
-
-
 
 var nav = Ti.UI.iOS.createNavigationWindow({
 	window: win1
@@ -36,4 +33,4 @@ nav.add(title);
 nav.open();
 mainView.add(label);
 win1.add(mainView);
-mainView.addEventListener('click', pList.listWin);
+mainView.addEventListener('click', listWin);
