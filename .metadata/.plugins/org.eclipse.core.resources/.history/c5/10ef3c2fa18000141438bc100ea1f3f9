@@ -34,13 +34,6 @@ var playerProfiles = {'cfcPlayerPros':{
 	}
 };
 
-var moreInfo = function (){
-	var win3 = Ti.UI.createWindow({
-			backgroundImage: 'background/' + background[0]
-		});
-		nav.openWindow(win3);
-};
-
 var listPlayers = function (){
 
 		var win2 = Ti.UI.createWindow({
@@ -67,7 +60,6 @@ var listPlayers = function (){
 					color: '#ffffff'	
 				});
 				profilesSection.add(myRow);
-				myRow.addEventListener('click', moreInfo);
 			};
 			
 		pTable.setData([profilesSection]);
