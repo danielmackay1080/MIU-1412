@@ -1,7 +1,7 @@
 var background = ['rectangle_1.png','Ellipse_1.png'];
 var images = ['1drogba.jpg','2hazard.jpg','cescfabregas.jpg','diegocosta.jpg','JohnTerry.JPG'];
 
-var playerProfiles = {'cfcPlayerPros':{
+var playerDetails = {'cfcPlayerInfo':{
 	'pTitle':'Players',
 	'fTitle': 'Chelsea F.C',
 	'playerList':[
@@ -35,25 +35,31 @@ var playerProfiles = {'cfcPlayerPros':{
 	}
 };
 
-var moreInfo = function (){
+// This function opens a new window for the detailed information
+
+var moreInfo = function (details){
 	var win3 = Ti.UI.createWindow({
 			backgroundImage: 'background/' + background[0]
 		});
-			for (i=0, z=playerProfiles.cfcPlayerPros.playerList.length; i<z; i++){
+			for (i=0, z=playerDetails.cfcPlayerInfo.playerList.length; i<z; i++){
 				var statLabel = Ti.UI.createLabel({
-					top: 200,
-					text: this.stats,
+					top: 250,
+					text: details.stat,
 					font: {fontSize:16, fontFamily: 'Arial' },
 					color: '#fff',
 					textAlign: 'left',
-					left: 10
+					left: 10,
+					right: 40
 				});
-				var details = Ti.UI.createScrollView({});
+				var detailText = Ti.UI.createScrollView({
+					height: 450,
+					top:350
+				});
 				var infoLabel = Ti.UI.createLabel({
-					top: 215,
+					top: 5,
 					right: 10,
 					left: 10,
-					text: this.description,
+					text: details.more,
 					font: {fontSize:16, fontFamily: 'Arial' },
 					color: '#fff',
 					textAlign: 'center'
@@ -66,14 +72,19 @@ var moreInfo = function (){
 					width: 200,
 					image: 'playerimages/'+ images[n]
 				});
-				win3.add(myImages);
-				win3.add(statLabel, details);
+				//view2.add(infoLabel);
+				detailText.add(infoLabel);
+				win3.add(myImages, statLabel, detailText);
+				//win3.add( details);
+				//console.log(infoLabel.text);
 			};
-			details.add(infoLabel);
+			
 			
 		};
 		nav.openWindow(win3);
 };
+
+// This function displays my table with the list of players
 
 var listPlayers = function (){
 
@@ -89,23 +100,32 @@ var listPlayers = function (){
 		backgroundColor: 'transparent'
 	});
 	var profilesSection = Ti.UI.createTableViewSection({
-		headerTitle: playerProfiles.cfcPlayerPros.pTitle,
-		footerTitle: playerProfiles.cfcPlayerPros.fTitle,
+		headerTitle: playerDetails.cfcPlayerInfo.pTitle,
+		footerTitle: playerDetails.cfcPlayerInfo.fTitle,
 		font: {fontSize: 22, fontFamily:'Arial'},
 		color: '#043455'	
 	});
-			for (var i=0, x=playerProfiles.cfcPlayerPros.playerList.length; i<x; i++){
+			for (var i=0, x=playerDetails.cfcPlayerInfo.playerList.length; i<x; i++){
 				var myRow = Ti.UI.createTableViewRow({
-					title: playerProfiles.cfcPlayerPros.playerList[i].name,
+					title: playerDetails.cfcPlayerInfo.playerList[i].name,
+					more: playerDetails.cfcPlayerInfo.playerList[i].description,
+					stat: playerDetails.cfcPlayerInfo.playerList[i].stats,
+					//ims: 'playerimages/'+ images[i],
 					hasChild: true,
 					font:{fontSize: 22, fontFamily:'Arial'},
 					color: '#ffffff'	
 				});
 				profilesSection.add(myRow);
-				myRow.addEventListener('click', moreInfo);
+				//myRow.addEventListener('click', moreInfo);
+				
+				
 			};
 			
 		pTable.setData([profilesSection]);
+		pTable.addEventListener('click', function(c){
+					moreInfo(c.source);
+					console.log(c);
+				});
 		win2.add(pTable);
 		nav.openWindow(win2);
 };

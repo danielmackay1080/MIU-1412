@@ -1,11 +1,13 @@
 var background = ['rectangle_1.png','Ellipse_1.png'];
 var pList = require('json');
 
+// The opening widnow for my application
+
 var win1 = Ti.UI.createWindow({
 	backgroundImage: 'background/' + background[0]
 });
 
-
+// The rest of the code is the display for my main page
 
 var nav = Ti.UI.iOS.createNavigationWindow({
 	window: win1
