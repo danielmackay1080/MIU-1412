@@ -66,10 +66,11 @@ var moreInfo = function (){
 					width: 200,
 					image: 'playerimages/'+ images[n]
 				});
-				
+				win3.add(myImages);
+				win3.add(statLabel, details);
 			};
 			details.add(infoLabel);
-			win3.add(statLabel, details, myImages);
+			
 		};
 		nav.openWindow(win3);
 };
@@ -81,7 +82,8 @@ var listPlayers = function (){
 		});
 		var pTable = Ti.UI.createTableView({
 		borderRadius: 10,
-		height: 220,
+		top: 150,
+		height: 300,
 		left:10,
 		right: 10,
 		backgroundColor: 'transparent'

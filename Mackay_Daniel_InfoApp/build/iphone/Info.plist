@@ -58,7 +58,6 @@
 	</array>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>appicon.png</string>
 	</array>
 </dict>
 </plist>
