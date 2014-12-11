@@ -56,7 +56,7 @@ var moreInfo = function (details){
 					top:350
 				});
 				var infoLabel = Ti.UI.createLabel({
-					top: 15,
+					top: 5,
 					right: 10,
 					left: 10,
 					text: details.more,
