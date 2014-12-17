@@ -1,8 +1,6 @@
 var bgImage = ['rectangle_1.png'];
 var inputFields = require('utility');
 
-// This is the display for my main window
-
 var win1 = Ti.UI.createWindow({
 	backgroundImage: 'backgroundimage/'+bgImage
 });

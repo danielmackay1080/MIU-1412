@@ -1,7 +1,5 @@
 var bgImage2 = ['rectangle_1.png'];
 
-// This function opens my new window and lays out all the text fields
-
 var newWin = function(){
 	var win2 = Ti.UI.createWindow({
 			backgroundImage: 'backgroundimage/' + bgImage2
@@ -26,6 +24,7 @@ var newWin = function(){
 		});
 		textField1.addEventListener('return', function(e) {
 			textField1.blur();
+			//alert('Input was: ' + textField1.value);
 		});
 		var textField2 = Ti.UI.createTextField({
 			height : 35,
@@ -39,6 +38,7 @@ var newWin = function(){
 		});
 		textField2.addEventListener('return', function(e) {
 			textField2.blur();
+			//alert('Input was: ' + textField2.value);
 		});
 		
 		var textField3 = Ti.UI.createTextField({
@@ -53,6 +53,7 @@ var newWin = function(){
 		});
 		textField3.addEventListener('return', function(e) {
 			textField3.blur();
+			//alert('Input was: ' + textField3.value);
 		});
 		
 		var textField4 = Ti.UI.createTextField({
@@ -67,6 +68,7 @@ var newWin = function(){
 		});
 		textField4.addEventListener('return', function(e) {
 			textField4.blur();
+			//alert('Input was: ' + textField4.value);
 		});
 		
 		var textField5 = Ti.UI.createTextField({
@@ -81,6 +83,7 @@ var newWin = function(){
 		});
 		textField5.addEventListener('return', function(e) {
 			textField5.blur();
+			//alert('Input was: ' + textField5.value);
 		});
 		
 		var view2 = Ti.UI.createView({
@@ -95,9 +98,6 @@ var newWin = function(){
 			textAlign: 'center',
 			text: 'Done'
 		});
-		
-		// This function makes the budget out of the figure you entered. It also has a display for my final window.
-		
 		var budget = function(){
 			//var myPrompt = prompt('Would you like to continue?');
 			var num1 = textField3.value - textField4.value;
