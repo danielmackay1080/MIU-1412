@@ -7,13 +7,6 @@ var win1 = Ti.UI.createWindow({
 	backgroundImage: 'backgroundimage/'+bgImage
 });
 
-var title = Ti.UI.createLabel({
-	top: 25,
-	text: 'The Budget App',
-	font: {fontSize:28, fontFamily: 'Cooper Black'},
-	color: '#f0f6f4'
-});
-
 var nav = Ti.UI.iOS.createNavigationWindow({
 	window: win1
 });
@@ -36,5 +29,5 @@ var label1 = Ti.UI.createLabel({
 
 nav.open();
 view1.add(label1);
-win1.add(view1, title);
+win1.add(view1);
 view1.addEventListener('click', inputFields.inputWin );

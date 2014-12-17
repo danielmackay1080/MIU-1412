@@ -8,7 +8,7 @@ var win1 = Ti.UI.createWindow({
 });
 
 var title = Ti.UI.createLabel({
-	top: 25,
+	top: 10,
 	text: 'The Budget App',
 	font: {fontSize:28, fontFamily: 'Cooper Black'},
 	color: '#f0f6f4'
