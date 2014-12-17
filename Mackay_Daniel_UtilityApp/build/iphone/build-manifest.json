@@ -1,0 +1,23 @@
+{
+	"target": "simulator",
+	"deployType": "development",
+	"deviceFamily": "universal",
+	"iosSdkPath": "/Users/danielmackay/Library/Application Support/Titanium/mobilesdk/osx/3.3.0.GA/iphone",
+	"tiCoreHash": "77157e1ffaec640cf559356a147b6a4c",
+	"modulesHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"modulesNativeHash": "d41d8cd98f00b204e9800998ecf8427e",
+	"gitHash": "787cd39",
+	"name": "Mackay_Daniel_UtilityApp",
+	"id": "mackay.danielutilityapp.miu1214",
+	"analytics": true,
+	"publisher": "danielmackay",
+	"url": "http://",
+	"version": "1.0",
+	"description": "",
+	"copyright": "2014 by danielmackay",
+	"guid": "534fcf80-21df-4d72-bb79-d9b78373d747",
+	"skipJSMinification": true,
+	"forceCopy": false,
+	"forceCopyAll": false,
+	"encryptJS": false
+}

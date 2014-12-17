@@ -1,9 +1,11 @@
 =run
 About\ Me\ app\:launchMode=run
 About\ Me\ app\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch)
-LAST_LAUNCH_TIMESTAMP=1418136125574
+LAST_LAUNCH_TIMESTAMP=1418827498351
 Mackay_Daniel_InfoApp\:launchMode=run
 Mackay_Daniel_InfoApp\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch)
+Mackay_Daniel_UtilityApp\:launchMode=run
+Mackay_Daniel_UtilityApp\:launchShortcut=com.appcelerator.titanium.mobile.ui.ios.simulator.iphone.launchShortcut.iPhone Retina (4 inch)
 eclipse.preferences.version=1
 preference.show.console.onError=true
 preference.studio.perspective.version=103

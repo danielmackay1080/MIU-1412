@@ -1,0 +1,10 @@
+var bgImage2 = ['rectangle_1.png'];
+
+var newWin = function(){
+	var win2 = Ti.UI.createWindow({
+			backgroundImage: 'backgroundimage/' + bgImage2
+		});
+		nav.openWindow(win2);
+};
+
+exports.inputWin = newWin;

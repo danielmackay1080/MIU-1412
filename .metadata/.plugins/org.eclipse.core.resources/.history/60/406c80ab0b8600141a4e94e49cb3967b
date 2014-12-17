@@ -1,0 +1,95 @@
+var bgImage2 = ['rectangle_1.png'];
+
+var newWin = function(){
+	var win2 = Ti.UI.createWindow({
+			backgroundImage: 'backgroundimage/' + bgImage2
+		});
+		
+		var label2 = Ti.UI.createLabel({
+			top : 10,
+			text: 'Create your Story',
+			font: {fontSize:22, fontFamily: 'Cooper Black'},
+			color: '#f0f6f4'
+		});
+		
+		var textField1 = Ti.UI.createTextField({
+			height : 35,
+			top : 50,
+			left : 40,
+			width : 240,
+			hintText : 'First Name',
+			keyboardType : Ti.UI.KEYBOARD_DEFAULT,
+			returnKeyType : Ti.UI.RETURNKEY_DEFAULT,
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		});
+		textField1.addEventListener('return', function(e) {
+			textField1.blur();
+			alert('Input was: ' + textField1.value);
+		});
+		var textField2 = Ti.UI.createTextField({
+			height : 35,
+			top : textField1.height+textField1.top+10,
+			left : 40,
+			width : 240,
+			hintText : 'Last Name',
+			keyboardType : Ti.UI.KEYBOARD_DEFAULT,
+			returnKeyType : Ti.UI.RETURNKEY_DEFAULT,
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		});
+		textField2.addEventListener('return', function(e) {
+			textField2.blur();
+			alert('Input was: ' + textField2.value);
+		});
+		
+		var textField3 = Ti.UI.createTextField({
+			height : 35,
+			top : textField2.height+textField2.top+10,
+			left : 40,
+			width : 240,
+			hintText : 'Age',
+			keyboardType : Ti.UI.KEYBOARD_DEFAULT,
+			returnKeyType : Ti.UI.RETURNKEY_DEFAULT,
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		});
+		textField3.addEventListener('return', function(e) {
+			textField3.blur();
+			alert('Input was: ' + textField3.value);
+		});
+		
+		var textField4 = Ti.UI.createTextField({
+			height : 35,
+			top : textField3.height+textField3.top+10,
+			left : 40,
+			width : 240,
+			hintText : 'Month you were born',
+			keyboardType : Ti.UI.KEYBOARD_DEFAULT,
+			returnKeyType : Ti.UI.RETURNKEY_DEFAULT,
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		});
+		textField4.addEventListener('return', function(e) {
+			textField4.blur();
+			alert('Input was: ' + textField4.value);
+		});
+		
+		var textField5 = Ti.UI.createTextField({
+			height : 35,
+			top : textField4.height+textField4.top+10,
+			left : 40,
+			width : 240,
+			hintText : 'Country',
+			keyboardType : Ti.UI.KEYBOARD_DEFAULT,
+			returnKeyType : Ti.UI.RETURNKEY_DEFAULT,
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		});
+		textField5.addEventListener('return', function(e) {
+			textField5.blur();
+			alert('Input was: ' + textField5.value);
+		});
+		
+		win2.add(textField1, label2, textField2, textField3, textField4, textField5 );
+		
+		
+		nav.openWindow(win2);
+};
+
+exports.inputWin = newWin;

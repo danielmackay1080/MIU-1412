@@ -1,0 +1,35 @@
+var bgImage2 = ['rectangle_1.png'];
+
+var newWin = function(){
+	var win2 = Ti.UI.createWindow({
+			backgroundImage: 'backgroundimage/' + bgImage2
+		});
+		
+		 
+		// Create a TextField.
+		var aTextField = Ti.UI.createTextField({
+			height : 35,
+			top : 10,
+			left : 40,
+			width : 240,
+			hintText : 'This is hint text',
+			//softKeyboardOnFocus : Ti.UI.Android.SOFT_KEYBOARD_DEFAULT_ON_FOCUS, // Android only
+			keyboardType : Ti.UI.KEYBOARD_DEFAULT,
+			returnKeyType : Ti.UI.RETURNKEY_DEFAULT,
+			borderStyle : Ti.UI.INPUT_BORDERSTYLE_ROUNDED
+		});
+		
+		// Listen for return events.
+		aTextField.addEventListener('return', function(e) {
+			aTextField.blur();
+			alert('Input was: ' + aTextField.value);
+		});
+		
+		// Add to the parent view.
+		win2.add(aTextField);
+		
+		
+		nav.openWindow(win2);
+};
+
+exports.inputWin = newWin;

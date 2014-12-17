@@ -1,0 +1,22 @@
+var bgImage = ['rectangle_1.png'];
+
+var win1 = Ti.UI.createWindow({
+	backgroundImage: 'backgroundimage/'+bgImage
+});
+
+var nav = Ti.UI.iOS.createNavigationWindow({
+	window: win1
+});
+
+var view1 = Ti.UI.createView({
+	top: 140,
+	height: 200,
+	left:10,
+	right:10,
+	borderRadius: 12,
+	backgroundColor: '#ccded7'
+});
+
+nav.open();
+win1.add(view1);
+

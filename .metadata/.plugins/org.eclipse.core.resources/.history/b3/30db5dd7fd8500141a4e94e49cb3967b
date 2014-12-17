@@ -1,0 +1,11 @@
+var bgImage = ['rectangle_1.png'];
+
+var mainWin = Ti.UI.createWindow({
+	backgroundColor: 'backgroundimage/'+bgImage
+});
+
+var nav = Ti.UI.iOS.createNavigationWindow({
+	window: mainWin
+});
+
+nav.open();
