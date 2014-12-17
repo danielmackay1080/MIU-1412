@@ -19,7 +19,7 @@ var view1 = Ti.UI.createView({
 });
 
 var label1 = Ti.UI.createLabel({
-	text: 'Create a Budget',
+	text: 'Create a Story',
 	font: {fontSize:22, fontFamily: 'Cooper Black'},
 	color: '#167554',
 	textAlign: 'center'

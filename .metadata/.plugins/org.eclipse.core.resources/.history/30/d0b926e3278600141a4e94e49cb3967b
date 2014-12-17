@@ -108,12 +108,12 @@ var newWin = function(){
 	var label4 = Ti.UI.createLabel({
 		left: 10,
 		right: 10,
-		text: textField1.value + ' you can spend $' + num2 + ' per day and you will save $'+ textField4.value+ ' per month',
+		text: textField1.value + ' you can spend $' + num2 + ' per day and you will save $'+ textField4.value,
 		font: {fontSize:28, fontFamily: 'Cooper Black'},
 		color: '#f0f6f4'
 	});
 	var label5 = Ti.UI.createLabel({
-		top: 30,
+		top: 10,
 		text: 'Your Budget',
 		font: {fontSize:32, fontFamily: 'Cooper Black'},
 		color: '#f0f6f4'

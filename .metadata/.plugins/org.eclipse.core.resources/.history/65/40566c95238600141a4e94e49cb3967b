@@ -24,7 +24,7 @@ var newWin = function(){
 		});
 		textField1.addEventListener('return', function(e) {
 			textField1.blur();
-			//alert('Input was: ' + textField1.value);
+			alert('Input was: ' + textField1.value);
 		});
 		var textField2 = Ti.UI.createTextField({
 			height : 35,
@@ -38,7 +38,7 @@ var newWin = function(){
 		});
 		textField2.addEventListener('return', function(e) {
 			textField2.blur();
-			//alert('Input was: ' + textField2.value);
+			alert('Input was: ' + textField2.value);
 		});
 		
 		var textField3 = Ti.UI.createTextField({
@@ -53,7 +53,7 @@ var newWin = function(){
 		});
 		textField3.addEventListener('return', function(e) {
 			textField3.blur();
-			//alert('Input was: ' + textField3.value);
+			alert('Input was: ' + textField3.value);
 		});
 		
 		var textField4 = Ti.UI.createTextField({
@@ -68,7 +68,7 @@ var newWin = function(){
 		});
 		textField4.addEventListener('return', function(e) {
 			textField4.blur();
-			//alert('Input was: ' + textField4.value);
+			alert('Input was: ' + textField4.value);
 		});
 		
 		var textField5 = Ti.UI.createTextField({
@@ -83,7 +83,7 @@ var newWin = function(){
 		});
 		textField5.addEventListener('return', function(e) {
 			textField5.blur();
-			//alert('Input was: ' + textField5.value);
+			alert('Input was: ' + textField5.value);
 		});
 		
 		var view2 = Ti.UI.createView({
@@ -99,26 +99,17 @@ var newWin = function(){
 			text: 'Done'
 		});
 		var budget = function(){
-			//var myPrompt = prompt('Would you like to continue?');
 			var num1 = textField3.value - textField4.value;
 			var num2 = num1 / textField5.value;
 			var win3 = Ti.UI.createWindow({
 			backgroundImage: 'backgroundimage/' + bgImage2
 		});
 	var label4 = Ti.UI.createLabel({
-		left: 10,
-		right: 10,
-		text: textField1.value + ' you can spend $' + num2 + ' per day and you will save $'+ textField4.value+ ' per month',
-		font: {fontSize:28, fontFamily: 'Cooper Black'},
+		text: textField1.value + 'you can spend' + num2 + ' per day and you will save '+ textField4.value,
+		font: {fontSize:22, fontFamily: 'Cooper Black'},
 		color: '#f0f6f4'
 	});
-	var label5 = Ti.UI.createLabel({
-		top: 30,
-		text: 'Your Budget',
-		font: {fontSize:32, fontFamily: 'Cooper Black'},
-		color: '#f0f6f4'
-	});
-		win3.add(label4, label5);
+		wins3.add(label4);
 		nav.openWindow(win3);
 		};
 
